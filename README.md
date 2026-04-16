@@ -4,6 +4,10 @@ A **Next.js** dashboard that connects recurring **Echo** policy patterns (themes
 
 **Live demo (optional):** add your Vercel (or other) URL here after you deploy — e.g. `https://korean-echo-tracker.vercel.app`
 
+### Project status
+
+**Work in progress.** Core flows run locally and the stack is stable, but features, copy, and data coverage are not “finished”—this repo is shared for **early feedback and collaboration**, not as a final product. Issues, rough edges, and missing polish are expected. When something is intentionally out of scope for now, we’ll note it in [GitHub Issues](https://github.com/russkysong/korean-echo-tracker/issues) (or your team’s tracker).
+
 ---
 
 ## What this app does
@@ -22,6 +26,8 @@ Policy sources and QA notes live in **`SOURCES.md`**.
 ---
 
 ## Local setup
+
+The repo includes **`package-lock.json`**. Keep it in git and update it whenever you change dependencies (`npm install <pkg>`), so **`npm ci`** works in CI and on fresh clones.
 
 ```bash
 npm install
