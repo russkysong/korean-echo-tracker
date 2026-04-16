@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+
+# Secrets — never commit real keys (use .env.local or host env UI)
+.env
+.env.*
+!.env.example
+
+*.log
+.DS_Store
+
+# Local graphify knowledge graph (large generated output; regenerate with graphify)
+graphify-out/

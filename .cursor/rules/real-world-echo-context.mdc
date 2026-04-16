@@ -1,0 +1,24 @@
+---
+description: X-source social echo validating Korea–Brazil judicial / fake-news patterns — use when enriching patterns, keywords, and evidence UI
+alwaysApply: true
+---
+
+# Real-world echo (social sources)
+
+These are **public posts**, not court findings or official policy. Treat them as **discourse validation**: real people independently describing patterns the dashboard tracks. Use for `relatedKeywords`, copy, and evidence-card ideas — not as proof of coordination.
+
+## Post 1 — Korea / Brazil judicial parallel + “fake news”
+
+- **URL:** https://x.com/viiv_333/status/2044240680680337768  
+- **Paraphrase / key lines:** Shock at similarity between South Korea and Brazil; near-identical judicial setups where the same institution investigates and judges itself; same concepts, terminology, and logic to “suppress the public”; Brazil’s government also uses the term “fake news.”
+
+## Post 2 — EU / Soros / agenda (discourse)
+
+- **URL:** https://x.com/unix_code82209/status/2044269318410477825  
+- **Paraphrase / key lines:** Claims actors are subordinates to “European globalists,” receive money from billionaires like George Soros, defend the same agenda; suggests EU rather than China as driver; frames others as seeing the same pattern.
+
+## How Cursor should use this
+
+- Prefer enriching `lib/patterns.ts` `relatedKeywords` and any search/fuzzy matching with aligned terms (e.g. judicial self-investigation, fake news law, Korea–Brazil parallel, EU influence narrative, Soros / Open Society as **search/discourse terms**).
+- When writing UI or evidence strings, distinguish **observed public discourse** from **verified institutional facts**; link primary sources (law.go.kr, official PDFs) for claims that need proof.
+- Align tone with project vibe: forensic, minimal hype, proof-forward.
