@@ -10,6 +10,23 @@ A **Next.js** dashboard that connects recurring **Echo** policy patterns (themes
 
 ---
 
+## Architecture & method
+
+The **home page (`/`)** embeds the same four **SVG diagrams** (scroll below the route list). They document structure, components, the “engine room” (data + libraries), and user journeys (including export paths):
+
+| Diagram | What it shows |
+|--------|----------------|
+| **1** | App shell (Next.js App Router), how `lib/patterns.ts` and `lib/matrix-korea-proof.ts` feed routes |
+| **2** | Each route (`/tracker`, `/copykiller`, `/matrix`, …) and its main components |
+| **3** | Data files, utilities (`locale-context`, `thread-chunks`, …), and npm usage (fuse.js, OpenLayers, Recharts, …) |
+| **4** | User goals → pages → outputs (e.g. X thread export, CSV / `patterns.ts`) |
+
+**Source file (served as static asset):** [`public/korea_echo_architecture.html`](./public/korea_echo_architecture.html) — in the running app also at **`/korea_echo_architecture.html`** (e.g. open in a new tab). On GitHub, open that path in the repo; for SVG layout, use a full browser window.
+
+The **[route table below](#what-this-app-does)** is the canonical list of URLs. The diagrams focus on the original dashboard set; the **MoLEG 입법예고 monitor** (`/assembly`) is listed in the table and uses `lib/assembly-api.ts` / `lib/lawmaking-api.ts` (server-side XML when `LAWMAKING_OC` is set).
+
+---
+
 ## What this app does
 
 | Area | Route | Purpose |

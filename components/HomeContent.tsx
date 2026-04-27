@@ -8,7 +8,8 @@ export function HomeContent() {
   const { isEnglish } = useLocale();
 
   return (
-    <main className="min-h-screen px-6 py-12 md:py-16 max-w-2xl mx-auto font-sans text-zinc-100">
+    <main className="min-h-screen px-6 py-12 md:py-16 max-w-6xl mx-auto font-sans text-zinc-100">
+      <div className="max-w-2xl mx-auto">
       <div className="flex justify-end mb-8">
         <LanguageToggle />
       </div>
@@ -81,8 +82,8 @@ export function HomeContent() {
             <span className="text-zinc-600"> — </span>
             <span className="text-zinc-400">
               {isEnglish
-                ? 'Legislative pre-announcement keyword monitor (Open API)'
-                : '입법예고 키워드 모니터(열린국회정보 API)'}
+                ? 'Government legislative notices (MoLEG / lawmaking.go.kr REST)'
+                : '정부 입법예고(MoLEG · 국민참여입법센터 REST)'}
             </span>
           </li>
           <li>
@@ -96,6 +97,36 @@ export function HomeContent() {
           </li>
         </ul>
       </nav>
+      </div>
+
+      <section className="mt-16 pt-12 border-t border-zinc-800" aria-labelledby="arch-heading">
+        <h2 id="arch-heading" className="font-mono text-lg text-zinc-300 mb-2 tracking-tight">
+          {isEnglish ? 'Architecture' : '아키텍처'}
+        </h2>
+        <p className="text-zinc-500 text-sm leading-relaxed mb-4 max-w-2xl">
+          {isEnglish
+            ? 'How routes, data (patterns, Kelly matrix), and libraries connect. Source: public/korea_echo_architecture.html — also at /korea_echo_architecture.html.'
+            : '라우트·데이터(패턴, Kelly 매트릭스)·라이브러리 연결 구조입니다. 원본은 public/korea_echo_architecture.html (/korea_echo_architecture.html).'}
+        </p>
+        <div className="rounded-2xl border border-zinc-800 overflow-hidden bg-zinc-950 shadow-inner">
+          <iframe
+            title={isEnglish ? 'Korea Echo Tracker architecture diagrams' : 'Korea Echo Tracker 아키텍처 다이어그램'}
+            src="/korea_echo_architecture.html"
+            className="w-full min-h-[2800px] border-0 block bg-[#0f0f0f]"
+            loading="lazy"
+          />
+        </div>
+        <p className="text-zinc-600 text-xs mt-3 font-mono">
+          <a
+            href="/korea_echo_architecture.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sky-500/90 hover:text-emerald-400 underline underline-offset-2"
+          >
+            {isEnglish ? 'Open diagrams in a new tab' : '새 탭에서 도표만 열기'}
+          </a>
+        </p>
+      </section>
     </main>
   );
 }
